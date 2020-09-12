@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "camps",
+  "info": {
+    "name": "Camp"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "image": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "price": {
+      "type": "float"
+    }
+  }
+}
